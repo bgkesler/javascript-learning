@@ -1,0 +1,11 @@
+NOTES:
+- Single and Double quotes are the same thing, project will set standard, IOLA uses single quotes 
+- Semicolon at end of line is not necessary, but it is a good practice
+- Variable can store any type of value, keyword var
+    - var firstName = "myName";
+    - var age = 20;
+    - var isStudent = false;
+    - var balance = 100.32;
+    - var dob = new Date(2000, 0, 30); //Jan 30th 2000
+
+
