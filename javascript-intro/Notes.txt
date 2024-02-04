@@ -1,11 +1,164 @@
 NOTES:
-- Single and Double quotes are the same thing, project will set standard, IOLA uses single quotes 
+- Single and Double quotes are the same thing, project will set standard, IOLA project uses single quotes 
 - Semicolon at end of line is not necessary, but it is a good practice
 - Variable can store any type of value, keyword var
-    - var firstName = "myName";
+    - var firstName = 'myName';
     - var age = 20;
     - var isStudent = false;
     - var balance = 100.32;
     - var dob = new Date(2000, 0, 30); //Jan 30th 2000
+- Naming vars
+    - Cannot use reserved keywords
+        - const, new, case, catch, etc...
+- Strings
+    - var brand = 'Target';
+    - type of brand, gives type
+    - brand.length, gives length
+    - brand.toUppercase(), gives TARGET
+    - brand.substring(0,3), gives Tar
+    - Concatenate
+        - var brand1 = 'Target', brand 2 = 'Walmart';
+        - brand1 + brand2, gives TargetWalmart
+        -'${brand1} ${brand2.toUppercase()}', gives Target WALMART
+- Objects
+    - Collection of properties
+    var person = {
+        firstName: 'Test',
+        age: 20,
+        address : {
+            city: 'London',
+            postCode: 'SW9'       
+        }
+    };
+    - Access city
+        - person.address.city
+    - Access all values in Object
+        - Object.values(person);
+    - Get all keys in Object
+        - Object.keys(person);
+    - Get object as a Strings
+        - JSON.stringify(person);
+- Boolean
+    - Same as Java
+- Arrays
+    var names = [
+    'Alex',
+    'Jamila', 
+    'Joe', 
+    'Aisha'
+    ];
+    - Index and size the same as Java
+        - names[0], names.length
+- Arithmatic Operators
+    - Same as Java
+        - +, -, *, /, %
+    - Exponent, **
+        - 3 ** 2
+            - equal to 9
+- Functions
+    function addNumbers(number1, number2) {
+        var addition = number1 + number2;
+        return addition;
+    }
+    - var result = addNumbers(2,4), result is set to 6
+    - Strings have built in functions like Java
+        - 'Name'.indexof('a'), returns 1
+- Loops
+    var names = [
+    "Alex",
+    "Jamila", 
+    "Joe", 
+    "Aisha",
+    "Bob"
+    ];
 
+    - For Loop:
+        console.log("for i");
+        
+        for (var i = 0; i < names.length; i++) {
+            console.log(names[i]);
+        }
 
+    - For Of Loop
+        console.log("for of");
+
+        for (const name of names) {
+            console.log(name);
+        }
+
+    - For Each Loop
+        console.log("forEach");
+
+        names.forEach(function(name) {
+            console.log(name)
+        });
+    - While Loops
+        - Same as Java
+    - Do While Loops
+        - Same as Java
+- Continue and Break 
+    - Same as Java
+- Increment and Decrement Operators
+    - Same as Java
+        - i++, i--
+        - ++i, --i
+- Comparison and Logical Operators 
+    - Same as Java
+- If Statements
+    - Same as Java
+- Ternary If Statements
+    var number = 101;
+    var result = number % 2 == 0 ? 'Even' : 'Odd';
+    console.log(result); //prints Odd 
+    //Equivalent to:
+    // if (number % 2 == 0) {
+    //     console.log('even');
+    // } else {
+    //     console.log('odd');
+    // }
+- Switch Statements
+    // Switch
+    var gender = 'Hello';
+
+    switch(gender) {
+        case "M":
+            console.log('Male');
+            break;
+        case "F":
+            console.log('Female');
+            break;
+        default:
+            console.log('Unknown');
+    }
+- Hoisting
+    // Hoisting
+    for (var i=0; i <= 10; i++) {
+        
+        console.log(i);
+
+    }
+    console.log("value of i outside loop " + i); //prints 11 which is a problem.  
+
+- let and const
+    -let
+        // Let
+        for (let i=0; i <= 10; i++) {
+            console.log(i);
+        }
+        console.log("value of i outside loop " + i); //gives error, good since we don't want i accessable outside of loop
+
+    - const
+        // const
+        const brand = "Amigoscode"; //contents of string cannot change and cannot assign new value
+        const brandObject = {};
+        brandObject["brand"] = brand; //can assign and delete into object, but cannot reassign
+        delete brandObject.brand; //delete brand property from brandObject
+  
+        console.log(brand); //prints Amigoscode
+        console.log(brandObject); //prints contents of brandObject
+
+        const hello = function() {
+            console.log("hello");
+        }
+
+        hello() //prints hello and function cannot be changed
